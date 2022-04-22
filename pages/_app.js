@@ -21,12 +21,12 @@ function MyApp({ Component, pageProps }) {
 
             {/* <Header /> */}
             <Sidenav>
-                <nav className="h-[60px] bg-amber-200 bg-opacity-60 rounded-lg p-4 mb-4">NAV</nav>
+                <nav className="mb-4 h-[60px] rounded-lg bg-amber-200 bg-opacity-60 p-4">NAV</nav>
                 <div className="flex flex-1">
-                    <section className="grid grid-cols-1 p-4 rounded-lg bg-violet-300 w-full lg:mr-4">
+                    <section className="grid w-full grid-cols-1 rounded-lg bg-violet-300 p-4 lg:mr-4">
                         <Component {...pageProps} />
                     </section>
-                    <aside className="hidden lg:block w-80 p-4 rounded-lg bg-violet-300">ASIDE</aside>
+                    <aside className="hidden w-80 rounded-lg bg-violet-300 p-4 lg:block">ASIDE</aside>
                 </div>
                 {/* <Footer /> */}
             </Sidenav>

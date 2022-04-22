@@ -23,34 +23,34 @@ function Sidenav({ children }) {
     return (
         <>
             {/*MOBILE SIDEBAR BUTTON*/}
-            <div className="fixed flex items-center space-x-4 top-5 right-5 lg:hidden">
+            <div className="fixed top-5 right-5 flex items-center space-x-4 lg:hidden">
                 <button
                     onClick={toggleSidenav}
-                    className="p-1 transition-colors duration-200 rounded-md bg-primary-50 hover:text-primary hover:bg-primary-100 focus:outline-none focus:ring"
+                    className="hover:text-primary rounded-md bg-primary-50 p-1 transition-colors duration-200 hover:bg-primary-100 focus:outline-none focus:ring"
                 >
                     MENU
                 </button>
             </div>
 
             {/*MAIN WRAPPER*/}
-            <main className="flex mx-auto max-w-[1840px]">
+            <main className="mx-auto flex max-w-[1840px]">
                 {/* OVERLAY */}
                 {sidenavIsOpen && (
                     <div className="fixed inset-0 z-10 h-screen bg-gray-600 opacity-50 lg:hidden" />
                 )}
                 {/*SIDEBAR*/}
                 <aside
-                    className={`fixed lg:sticky inset-y-0 lg:h-screen w-80 lg:w-80 pl-4 py-4 z-10 transform opacity-100 transition-all duration-500 lg:-translate-x-0 
+                    className={`fixed inset-y-0 z-10 w-80 transform py-4 pl-4 opacity-100 transition-all duration-500 lg:sticky lg:h-screen lg:w-80 lg:-translate-x-0 
                         ${sidenavIsOpen ? 'translate-x-0' : '-translate-x-full'}
                         `}
                 >
                     {/* MAIN NAV */}
                     <nav
                         ref={ref}
-                        className="flex h-full bg-white px-3 py-2 rounded-xl shadow-lg focus:outline-none"
+                        className="flex h-full rounded-xl bg-white px-3 py-2 shadow-lg focus:outline-none"
                     >
-                        <nav className="flex flex-col flex-1 p-3 overflow-y-hidden hover:overflow-y-auto no-scrollbar">
-                            <div className="flex justify-center mt-5 mb-8">
+                        <nav className="no-scrollbar flex flex-1 flex-col overflow-y-hidden p-3 hover:overflow-y-auto">
+                            <div className="mt-5 mb-8 flex justify-center">
                                 <Link href="/">
                                     <a>LOGO</a>
                                 </Link>
@@ -59,7 +59,7 @@ function Sidenav({ children }) {
                     </nav>
                 </aside>
                 {/*CONTENT*/}
-                <div className="flex-1 flex flex-col min-h-screen p-4">{children}</div>
+                <div className="flex min-h-screen flex-1 flex-col p-4">{children}</div>
             </main>
         </>
     )
