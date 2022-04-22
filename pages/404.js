@@ -1,4 +1,3 @@
-import Button from '@/components/Button/Button'
 import Link from 'next/link'
 
 export default function FourOhFour() {
@@ -13,7 +12,7 @@ export default function FourOhFour() {
 
                     <Link href="/auth/login">
                         <a className="mx-auto mt-12 grid w-1/2 grid-cols-1 gap-4">
-                            <Button style="secondary">Go back</Button>
+                            <div>Go back</div>
                         </a>
                     </Link>
                 </div>

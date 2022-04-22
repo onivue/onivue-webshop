@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export default function Home() {
     return (
-        <div className="flex flex-1 flex-col justify-center">
-            <div className="bg-violet-500">...</div>
+        <div className="">
+            <div className="bg-violet-500 rounded-lg p-4">CONTENT</div>
         </div>
     )
 }
