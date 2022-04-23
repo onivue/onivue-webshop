@@ -27,7 +27,13 @@ const ProductCard = ({ title, price, rate, id, image, category }) => {
                     <div className="h-14 overflow-hidden ">
                         <span className="mb-0 break-words text-lg font-semibold text-gray-900">{title}</span>
                     </div>
-                    <p className="text-md mt-0 text-primary-800">{price}</p>
+                    <p className="text-md mt-0 text-primary-800">
+                        {new Intl.NumberFormat('de-CH', {
+                            style: 'currency',
+                            currency: 'CHF',
+                            minimumFractionDigits: 2,
+                        }).format(price)}
+                    </p>
                     <Rating rate={rate}></Rating>
                 </div>
 
