@@ -13,7 +13,7 @@ const RightSection = () => {
     }, [])
 
     return (
-        <aside className=" mb-4 hidden w-96 gap-4 rounded-lg bg-violet-50 p-4 shadow-md 2xl:block">
+        <aside className=" mb-4 mr-4 hidden w-96 gap-4 rounded-lg bg-violet-50 p-4 shadow-md 2xl:block">
             <h2 className="mb-4 font-bold text-primary-500">Tagesangebot</h2>
             <ProductCard
                 key={hotItem?.id}
