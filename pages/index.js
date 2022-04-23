@@ -20,6 +20,7 @@ export default function Home() {
             <div className="sticky top-0 z-10 w-full rounded-lg bg-white bg-opacity-40 p-4 shadow-md backdrop-blur-sm">
                 FILTER
             </div>
+
             <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
                 {items.map((item) => (
                     <ProductCard

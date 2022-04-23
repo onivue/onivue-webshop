@@ -59,11 +59,17 @@ function Sidenav({ children }) {
                                     </a>
                                 </Link>
                             </div>
+                            <h2 className="mb-4 font-bold text-primary-500">Kategorien</h2>
+                            <div className="flex flex-col gap-4">
+                                <div>Kleidung</div>
+                                <div>Schmuck</div>
+                                <div>Elektronik</div>
+                            </div>
                         </nav>
                     </nav>
                 </aside>
                 {/*CONTENT*/}
-                <div className="flex max-h-screen min-h-screen flex-1 flex-col p-4">{children}</div>
+                <div className="flex max-h-screen min-h-screen flex-1 flex-col">{children}</div>
             </main>
         </>
     )

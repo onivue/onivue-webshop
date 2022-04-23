@@ -15,9 +15,9 @@ const ProductCard = ({ title, price, rate, id, image, category }) => {
     return (
         <div className="group relative cursor-pointer rounded-2xl bg-white p-2 shadow-md hover:ring-2 hover:ring-primary-300">
             <div className="relative overflow-x-hidden rounded-xl">
-                <img className="h-56 w-full rounded-lg object-scale-down" src={image} />
-                <div className="absolute left-2 top-2">
-                    <div className="text-slate-500-400 cursor-pointer rounded-lg bg-white bg-opacity-40 p-1 text-xs backdrop-blur-sm backdrop-filter hover:bg-primary-100 hover:text-primary-500">
+                <img className="h-52 w-full rounded-lg object-scale-down" src={image} />
+                <div className="absolute left-2 bottom-2">
+                    <div className="cursor-pointer rounded-lg bg-white bg-opacity-40 p-1 text-xs  backdrop-blur-sm backdrop-filter hover:bg-primary-100 hover:text-primary-500">
                         {category}
                     </div>
                 </div>
