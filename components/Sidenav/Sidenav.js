@@ -25,10 +25,10 @@ function Sidenav({ children }) {
     return (
         <>
             {/*MOBILE SIDEBAR BUTTON*/}
-            <div className="fixed bottom-5 right-5 flex items-center space-x-4 lg:hidden">
+            <div className="fixed bottom-5 right-5 z-50 flex items-center space-x-4 lg:hidden">
                 <button
                     onClick={toggleSidenav}
-                    className="hover:text-primary rounded-md bg-primary-50 p-1 transition-colors duration-200 hover:bg-primary-100 focus:outline-none focus:ring"
+                    className="hover:text-primary rounded-md bg-primary-50 p-1 ring-primary-200 transition-colors duration-200 hover:bg-primary-100 focus:outline-none focus:ring"
                 >
                     <HiMenuAlt2 className="h-8 w-8" />
                 </button>
@@ -38,18 +38,18 @@ function Sidenav({ children }) {
             <main className="mx-auto flex max-w-[1840px]">
                 {/* OVERLAY */}
                 {sidenavIsOpen && (
-                    <div className="fixed inset-0 z-10 h-screen bg-gray-600 opacity-50 lg:hidden" />
+                    <div className="fixed inset-0 z-20 h-screen bg-gray-600 opacity-50 lg:hidden" />
                 )}
                 {/*SIDEBAR*/}
                 <aside
-                    className={`fixed inset-y-0 z-10 w-80 transform py-4 pl-4 opacity-100 transition-all duration-500 lg:sticky lg:h-screen lg:w-80 lg:-translate-x-0 
+                    className={`fixed inset-y-0 z-20 w-80 transform py-4 pl-4 opacity-100 transition-all duration-500 lg:sticky lg:h-screen lg:w-80 lg:-translate-x-0 
                         ${sidenavIsOpen ? 'translate-x-0' : '-translate-x-full'}
                         `}
                 >
                     {/* MAIN NAV */}
                     <nav
                         ref={ref}
-                        className="flex h-full rounded-xl bg-white px-3 py-2 shadow-lg focus:outline-none"
+                        className="flex h-full rounded-xl bg-white px-3 py-2 shadow-md focus:outline-none"
                     >
                         <nav className="no-scrollbar flex flex-1 flex-col overflow-y-hidden p-3 hover:overflow-y-auto">
                             <div className="mt-5 mb-8 flex justify-center">
@@ -63,7 +63,7 @@ function Sidenav({ children }) {
                     </nav>
                 </aside>
                 {/*CONTENT*/}
-                <div className="flex min-h-screen flex-1 flex-col p-4">{children}</div>
+                <div className="flex max-h-screen min-h-screen flex-1 flex-col p-4">{children}</div>
             </main>
         </>
     )
