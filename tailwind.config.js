@@ -16,7 +16,7 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    ...colors.amber,
+                    ...colors.purple,
                 },
                 dark: { 100: '#333845', 200: '#171a23' },
             },
@@ -32,7 +32,7 @@ module.exports = {
     },
     plugins: [
         // require('@tailwindcss/typography'),
-        // require('@tailwindcss/forms'),
+        require('@tailwindcss/forms'),
         // ...
     ],
 }

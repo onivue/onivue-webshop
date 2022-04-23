@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import router from 'next/router'
+import LogoIcon from '../LogoIcon/LogoIcon'
+import { HiMenuAlt2 } from 'react-icons/hi'
 // import { motion, AnimatePresence } from 'framer-motion'
 
 function Sidenav({ children }) {
@@ -23,12 +25,12 @@ function Sidenav({ children }) {
     return (
         <>
             {/*MOBILE SIDEBAR BUTTON*/}
-            <div className="fixed top-5 right-5 flex items-center space-x-4 lg:hidden">
+            <div className="fixed bottom-5 right-5 flex items-center space-x-4 lg:hidden">
                 <button
                     onClick={toggleSidenav}
                     className="hover:text-primary rounded-md bg-primary-50 p-1 transition-colors duration-200 hover:bg-primary-100 focus:outline-none focus:ring"
                 >
-                    MENU
+                    <HiMenuAlt2 className="h-8 w-8" />
                 </button>
             </div>
 
@@ -52,7 +54,9 @@ function Sidenav({ children }) {
                         <nav className="no-scrollbar flex flex-1 flex-col overflow-y-hidden p-3 hover:overflow-y-auto">
                             <div className="mt-5 mb-8 flex justify-center">
                                 <Link href="/">
-                                    <a>LOGO</a>
+                                    <a>
+                                        <LogoIcon className="h-12 w-12" />
+                                    </a>
                                 </Link>
                             </div>
                         </nav>
