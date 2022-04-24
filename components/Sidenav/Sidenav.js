@@ -13,10 +13,7 @@ function Sidenav({ children }) {
     //MOBILE SIDENAV CLOSE HANDLER
     useEffect(() => {
         const handleOutsideClick = (event) => {
-            if (!ref.current?.contains(event.target)) {
-                if (!sidenavIsOpen) return
-                toggleSidenav(false)
-            }
+            !ref.current?.contains(event.target) && sidenavIsOpen && toggleSidenav(false)
         }
         window.addEventListener('mousedown', handleOutsideClick)
         return () => window.removeEventListener('mousedown', handleOutsideClick)
@@ -59,11 +56,23 @@ function Sidenav({ children }) {
                                     </a>
                                 </Link>
                             </div>
-                            <h2 className="mb-4 font-bold text-primary-500">Kategorien</h2>
-                            <div className="flex flex-col gap-4">
-                                <div>Kleidung</div>
-                                <div>Schmuck</div>
-                                <div>Elektronik</div>
+                            <div className="flex flex-col gap-8">
+                                <div>
+                                    <h2 className="mb-4 font-bold">Kategorien</h2>
+                                    <div className="flex flex-col gap-2">
+                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Kleidung</div>
+                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Schmuck</div>
+                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Elektronik</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 className="mb-4 font-bold">Direkt zu</h2>
+                                    <div className="flex flex-col gap-2">
+                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Ausverkauf</div>
+                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Gutscheine</div>
+                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Helpcenter</div>
+                                    </div>
+                                </div>
                             </div>
                         </nav>
                     </nav>
