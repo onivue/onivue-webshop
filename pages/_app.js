@@ -8,8 +8,6 @@ import TopBar from '@/components/TopBar/TopBar'
 import RightSection from '@/components/RightSection/RightSection'
 import Footer from '@/components/Footer/Footer'
 
-const scrollToRef = (ref) => ref.current.scrollIntoView({ behavior: 'smooth' })
-
 function MyApp({ Component, pageProps }) {
     const router = useRouter()
     const sectionRef = useRef(null)
