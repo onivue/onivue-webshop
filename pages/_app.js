@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
             <Sidenav>
                 <TopBar />
                 <div className="flex flex-1 overflow-y-auto">
-                    <section className="mb-4 grid w-full grid-cols-1 overflow-y-auto rounded-lg p-4 pt-0 lg:mr-4">
+                    <section className="mb-4 mt-4 grid w-full grid-cols-1 overflow-y-auto rounded-lg px-4 pb-4 lg:mr-4">
                         <Component {...pageProps} />
                     </section>
                     <RightSection />

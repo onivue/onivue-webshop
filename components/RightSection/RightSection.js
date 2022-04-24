@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import ProductCard from '@/components/Product/ProductCard'
+import ProductCardSkeleton from '@/components/Product/ProductCardSkeleton'
 
 const RightSection = () => {
     const [hotItem, setHotItems] = useState(null)
@@ -13,17 +14,9 @@ const RightSection = () => {
     }, [])
 
     return (
-        <aside className=" mb-4 mr-4 hidden w-96 gap-4 rounded-lg bg-violet-50 p-4 shadow-md 2xl:block">
+        <aside className=" mb-4 mr-4 mt-4 hidden w-96 gap-4 rounded-lg bg-violet-50 p-4 shadow-md 2xl:block">
             <h2 className="mb-4 font-bold text-primary-500">Tagesangebot</h2>
-            <ProductCard
-                key={hotItem?.id}
-                title={hotItem?.title}
-                price={hotItem?.price}
-                rate={hotItem?.rating.rate}
-                rateCount={hotItem?.rating.count}
-                image={hotItem?.image}
-                category={hotItem?.category}
-            />
+            {hotItem ? <ProductCard key={hotItem.id} product={hotItem} /> : <ProductCardSkeleton />}
             <h2 className="my-4 font-bold text-primary-500">News</h2>
             <div className="flex flex-col gap-y-4">
                 <div className="cursor-pointer">
@@ -40,7 +33,7 @@ const RightSection = () => {
                 </div>
             </div>
             <h2 className="my-4 font-bold text-primary-500">Feedback</h2>
-            <div className="col-span-4 mb-4 flex justify-between rounded-xl bg-gradient-to-bl from-primary-200 to-blue-300 p-2 text-2xl shadow-md">
+            <div className="col-span-4 mb-4 flex justify-between text-2xl">
                 <span className="cursor-pointer">🙂</span>
                 <span className="cursor-pointer">🙁</span>
                 <span className="cursor-pointer">🙁</span>
