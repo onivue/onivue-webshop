@@ -17,7 +17,7 @@ const getProduct = async (id) => {
 
 export default function ProductPage({ item }) {
     return (
-        <div className="min-h-screen  pt-2">
+        <div className="pt-2">
             <ProductCard key={item.id} product={item} />
         </div>
     )
