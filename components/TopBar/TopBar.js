@@ -23,7 +23,11 @@ function TopBar() {
 
                 <div className="mb-3 flex w-full justify-between lg:ml-2 lg:mb-0 lg:w-auto">
                     <div className="mr-4 grid h-full place-items-center rounded-lg lg:hidden ">
-                        <LogoIcon className="h-7 w-7" />
+                        <Link href="/">
+                            <a>
+                                <LogoIcon className="h-7 w-7" />
+                            </a>
+                        </Link>
                     </div>
                     <div className="flex items-center divide-x-2 divide-primary-200 text-sm">
                         <div className="flex cursor-pointer items-center  px-2 hover:text-primary-500">
