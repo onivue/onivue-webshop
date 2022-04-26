@@ -35,11 +35,11 @@ function MyApp({ Component, pageProps }) {
                         ref={sectionRef}
                     >
                         <Component {...pageProps} />
+                        <Footer />
                     </section>
                     <RightSection />
                 </div>
             </Sidenav>
-            <Footer />
         </>
     )
 }

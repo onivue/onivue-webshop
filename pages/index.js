@@ -26,7 +26,7 @@ export default function Home() {
                 </h1>
             </div>
 
-            <div className="sticky top-0 z-10 flex w-full items-center justify-between rounded-lg bg-white bg-opacity-40 p-2 shadow-md backdrop-blur-sm">
+            <div className="sticky top-0 z-10 flex w-full items-center justify-between rounded-lg bg-white  p-2 shadow-md backdrop-blur-sm">
                 <HiOutlineFilter className="align-middle text-sm text-primary-500" />
                 <div className="flex gap-2">
                     {items &&
