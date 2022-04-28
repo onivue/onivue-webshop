@@ -14,7 +14,7 @@ const RightSection = () => {
     }, [])
 
     return (
-        <aside className=" mb-4 mr-4 mt-4 hidden w-96 gap-4 overflow-auto p-4 2xl:block">
+        <div className="w-92 sticky top-20 hidden h-[calc(100vh-90px)] gap-4 overflow-auto pt-4 pr-4 lg:block">
             <h2 className="mb-4 font-bold text-primary-500">Tagesangebot</h2>
             {hotItem ? <ProductCard key={hotItem.id} product={hotItem} /> : <ProductCardSkeleton />}
             <h2 className="my-4 font-bold text-primary-500">News</h2>
@@ -45,7 +45,7 @@ const RightSection = () => {
                 rows="4"
                 placeholder="Wir freuen uns auf dein Feedback!"
             ></textarea>
-        </aside>
+        </div>
     )
 }
 

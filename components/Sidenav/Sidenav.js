@@ -32,21 +32,21 @@ function Sidenav({ children }) {
             </div>
 
             {/*MAIN WRAPPER*/}
-            <main className="mx-auto flex max-w-[1840px]">
+            <main className="mx-auto  max-w-[1840px] ">
                 {/* OVERLAY */}
                 {sidenavIsOpen && (
                     <div className="fixed inset-0 z-20 h-screen bg-gray-600 opacity-50 lg:hidden" />
                 )}
                 {/*SIDEBAR*/}
                 <aside
-                    className={`fixed inset-y-0 z-20 w-80 transform py-4 pl-4 opacity-100 transition-all duration-500 lg:sticky lg:h-screen lg:w-80 lg:-translate-x-0 
+                    className={`fixed inset-y-0 z-20 w-80 transform py-4 pl-4 opacity-100 transition-all duration-500  lg:h-screen lg:w-80 lg:-translate-x-0 
                         ${sidenavIsOpen ? 'translate-x-0' : '-translate-x-full'}
                         `}
                 >
                     {/* MAIN NAV */}
                     <nav
                         ref={ref}
-                        className="flex h-full rounded-xl bg-white px-3 py-2 shadow-md focus:outline-none"
+                        className="flex h-full rounded-xl bg-white px-3 py-2 shadow-md focus:outline-none "
                     >
                         <nav className="no-scrollbar flex flex-1 flex-col overflow-y-hidden p-3 hover:overflow-y-auto">
                             <div className="mt-5 mb-8 flex justify-center">
@@ -90,7 +90,7 @@ function Sidenav({ children }) {
                     </nav>
                 </aside>
                 {/*CONTENT*/}
-                <div className="flex max-h-screen min-h-screen flex-1 flex-col">{children}</div>
+                <div className="flex flex-1 flex-col lg:ml-80">{children}</div>
             </main>
         </>
     )

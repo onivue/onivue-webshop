@@ -29,9 +29,9 @@ function MyApp({ Component, pageProps }) {
             <Sidenav>
                 <TopBar />
 
-                <div className="flex flex-1 overflow-y-auto">
+                <div className="flex flex-1 ">
                     <section
-                        className="mb-4 mt-4 grid w-full grid-cols-1 overflow-y-auto rounded-lg px-4 pb-4 lg:mr-4"
+                        className="mb-4 mt-4 grid w-full grid-cols-1  rounded-lg px-4 pb-4"
                         ref={sectionRef}
                     >
                         <Component {...pageProps} />
