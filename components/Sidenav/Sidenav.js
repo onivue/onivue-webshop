@@ -60,17 +60,29 @@ function Sidenav({ children }) {
                                 <div>
                                     <h2 className="mb-4 font-bold">Kategorien</h2>
                                     <div className="flex flex-col gap-2">
-                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Kleidung</div>
-                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Schmuck</div>
-                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Elektronik</div>
+                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                            Kleidung
+                                        </div>
+                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                            Schmuck
+                                        </div>
+                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                            Elektronik
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <h2 className="mb-4 font-bold">Direkt zu</h2>
                                     <div className="flex flex-col gap-2">
-                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Ausverkauf</div>
-                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Gutscheine</div>
-                                        <div className="rounded-lg bg-gray-100 py-1 px-3">Helpcenter</div>
+                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                            Ausverkauf
+                                        </div>
+                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                            Gutscheine
+                                        </div>
+                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                            Helpcenter
+                                        </div>
                                     </div>
                                 </div>
                             </div>

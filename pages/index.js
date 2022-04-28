@@ -26,9 +26,9 @@ export default function Home() {
                 </h1>
             </div>
 
-            <div className="sticky top-0 z-10 flex w-full items-center justify-between rounded-lg bg-white  p-2 shadow-md backdrop-blur-sm">
-                <HiOutlineFilter className="align-middle text-sm text-primary-500" />
-                <div className="flex gap-2">
+            <div className="top-0 z-10 flex w-full flex-col  items-center justify-between gap-4 rounded-lg bg-white p-2 shadow-md  backdrop-blur-sm md:sticky md:flex-row">
+                <HiOutlineFilter className="align-middle text-lg text-primary-500" />
+                <div className="flex flex-wrap gap-2">
                     {items &&
                         [...new Set(items.map((item) => item['category']))].map((cat) => {
                             return (
