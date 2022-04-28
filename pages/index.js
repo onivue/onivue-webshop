@@ -3,7 +3,7 @@ import ProductCardSkeleton from '@/components/Product/ProductCardSkeleton'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { HiOutlineFilter } from 'react-icons/hi'
+import { HiFilter, HiAdjustments } from 'react-icons/hi'
 
 export default function Home() {
     const [items, setItems] = useState(null)
@@ -27,7 +27,11 @@ export default function Home() {
             </div>
 
             <div className="top-0 z-10 flex w-full flex-col  items-center justify-between gap-4 rounded-lg bg-white p-2 shadow-md  backdrop-blur-sm md:flex-row">
-                <HiOutlineFilter className="align-middle text-lg text-primary-500" />
+                <div className="flex gap-4 text-lg text-gray-400">
+                    <HiFilter className="" />
+                    <HiAdjustments className="" />
+                </div>
+
                 <div className="flex flex-wrap gap-2">
                     {items &&
                         [...new Set(items.map((item) => item['category']))].map((cat) => {

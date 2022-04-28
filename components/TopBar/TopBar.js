@@ -7,7 +7,7 @@ import LogoIcon from '@/components/LogoIcon/LogoIcon'
 
 function TopBar() {
     return (
-        <div className="sticky  top-4  z-10 mx-4 mt-4 rounded-lg bg-white p-3 px-3 shadow-md">
+        <div className="sticky  top-4 z-10 mx-4 mt-4 flex items-center rounded-lg bg-white p-3 px-3 shadow-md lg:h-16">
             <div className="relative flex w-full flex-wrap-reverse items-center justify-between justify-items-end lg:flex-nowrap">
                 <div className="relative h-full w-full  text-gray-600">
                     <input

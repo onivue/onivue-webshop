@@ -14,7 +14,7 @@ const RightSection = () => {
     }, [])
 
     return (
-        <div className="w-92 sticky top-20 hidden h-[calc(100vh-90px)] gap-4 overflow-auto pt-4 pr-4 lg:block">
+        <div className="w-92 sticky top-20 hidden h-[calc(100vh-5rem)] gap-4 overflow-auto pt-4 pr-4 pl-2 lg:block">
             <h2 className="mb-4 font-bold text-primary-500">Tagesangebot</h2>
             {hotItem ? <ProductCard key={hotItem.id} product={hotItem} /> : <ProductCardSkeleton />}
             <h2 className="my-4 font-bold text-primary-500">News</h2>
