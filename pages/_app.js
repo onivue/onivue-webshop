@@ -4,10 +4,10 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useState, useEffect, useRef } from 'react'
-import SideBar from '@/components/SideBar/SideBar'
-import TopBar from '@/components/TopBar/TopBar'
+import SideBar from '@/components/Layout/SideBar/SideBar'
+import TopBar from '@/components/Layout/Header/Header'
 import RightSection from '@/components/RightSection/RightSection'
-import Footer from '@/components/Footer/Footer'
+import Footer from '@/components/Layout/Footer/Footer'
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter()
