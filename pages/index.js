@@ -26,10 +26,10 @@ export default function Home() {
                 </h1>
             </div>
 
-            <div className="top-0 z-10 flex w-full flex-col  items-center justify-between gap-4 rounded-lg bg-white p-2 shadow-md  backdrop-blur-sm md:flex-row">
-                <div className="flex gap-4 text-lg text-gray-400">
-                    <HiFilter className="" />
-                    <HiAdjustments className="" />
+            <div className="top-0 z-10 flex w-full flex-col  items-center justify-between gap-4 rounded-lg bg-white py-2 px-4 shadow-md md:flex-row">
+                <div className="flex gap-4 text-xl text-gray-400">
+                    <HiFilter className="cursor-pointer" />
+                    <HiAdjustments className="cursor-pointer" />
                 </div>
 
                 <div className="flex flex-wrap gap-2">

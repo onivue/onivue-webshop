@@ -30,7 +30,7 @@ const ProductCard = ({ product }) => {
                         />
                     </div>
                     <div className="absolute left-2 bottom-2">
-                        <div className="cursor-pointer rounded-lg bg-white bg-opacity-40 p-1 text-xs  backdrop-blur-sm backdrop-filter hover:bg-primary-100 hover:text-primary-500">
+                        <div className="cursor-pointer rounded-lg bg-white bg-opacity-40 p-1 text-xs  hover:bg-primary-100 hover:text-primary-500">
                             {product.category}
                         </div>
                     </div>

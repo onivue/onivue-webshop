@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import '@/styles/globals.css'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -10,11 +11,6 @@ import Footer from '@/components/Footer/Footer'
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter()
-    const sectionRef = useRef(null)
-
-    useEffect(() => {
-        sectionRef.current.scrollTo({ top: 0, behavior: 'smooth' })
-    }, [router])
 
     return (
         <>
@@ -25,15 +21,17 @@ function MyApp({ Component, pageProps }) {
                 />
                 <title>onivue-...</title>
             </Head>
-
+            <img
+                src="https://play.tailwindcss.com//img/beams.jpg"
+                alt=""
+                className="fixed top-1/2 left-1/2 -z-50 max-w-none -translate-x-1/2 -translate-y-1/2"
+                // width="1308"
+            />
             <Sidenav>
                 <TopBar />
 
                 <div className="flex flex-1 ">
-                    <section
-                        className="mb-4 mt-4 grid w-full grid-cols-1  rounded-lg px-4 pb-4"
-                        ref={sectionRef}
-                    >
+                    <section className="mb-4 mt-4 grid w-full grid-cols-1  rounded-lg px-4 pb-4">
                         <Component {...pageProps} />
                         <Footer />
                     </section>

@@ -22,7 +22,11 @@ function Sidenav({ children }) {
     return (
         <>
             {/*MOBILE SIDEBAR BUTTON*/}
-            <div className="fixed bottom-5 right-5 z-50 flex items-center space-x-4 lg:hidden">
+            <div
+                className={`fixed bottom-5 right-5 z-50 animate-fade-in items-center space-x-4 ${
+                    sidenavIsOpen ? 'hidden' : 'lg:hidden'
+                }`}
+            >
                 <button
                     onClick={toggleSidenav}
                     className="hover:text-primary rounded-md bg-primary-50 p-1 ring-primary-200 transition-colors duration-200 hover:bg-primary-100 focus:outline-none focus:ring"
@@ -32,10 +36,10 @@ function Sidenav({ children }) {
             </div>
 
             {/*MAIN WRAPPER*/}
-            <main className="mx-auto  max-w-[1840px] ">
+            <main className="mx-auto  max-w-[1900px] ">
                 {/* OVERLAY */}
                 {sidenavIsOpen && (
-                    <div className="fixed inset-0 z-20 h-screen bg-gray-600 opacity-50 lg:hidden" />
+                    <div className="fixed inset-0 z-20 h-screen animate-fade-in bg-gray-500 bg-opacity-40 backdrop-blur-sm backdrop-filter lg:hidden" />
                 )}
                 {/*SIDEBAR*/}
                 <aside
@@ -46,7 +50,7 @@ function Sidenav({ children }) {
                     {/* MAIN NAV */}
                     <nav
                         ref={ref}
-                        className="flex h-full rounded-xl bg-white px-3 py-2 shadow-md focus:outline-none "
+                        className="flex h-full rounded-xl bg-white  px-3 py-2 shadow-md focus:outline-none"
                     >
                         <nav className="no-scrollbar flex flex-1 flex-col overflow-y-hidden p-3 hover:overflow-y-auto">
                             <div className="mt-5 mb-8 flex justify-center">
@@ -59,14 +63,14 @@ function Sidenav({ children }) {
                             <div className="flex flex-col gap-8">
                                 <div>
                                     <h2 className="mb-4 font-bold">Kategorien</h2>
-                                    <div className="flex flex-col gap-2">
-                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                    <div className="flex flex-col gap-2 text-zinc-700">
+                                        <div className="cursor-pointer rounded-lg bg-primary-100 py-1 px-3 text-primary-800">
                                             Kleidung
                                         </div>
-                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                        <div className="cursor-pointer rounded-lg bg-primary-100 py-1 px-3 text-primary-800">
                                             Schmuck
                                         </div>
-                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                        <div className="cursor-pointer rounded-lg bg-primary-100 py-1 px-3 text-primary-800">
                                             Elektronik
                                         </div>
                                     </div>
@@ -74,13 +78,13 @@ function Sidenav({ children }) {
                                 <div>
                                     <h2 className="mb-4 font-bold">Direkt zu</h2>
                                     <div className="flex flex-col gap-2">
-                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                        <div className="cursor-pointer rounded-lg bg-primary-100 py-1 px-3 text-primary-800">
                                             Ausverkauf
                                         </div>
-                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                        <div className="cursor-pointer rounded-lg bg-primary-100 py-1 px-3 text-primary-800">
                                             Gutscheine
                                         </div>
-                                        <div className="cursor-pointer rounded-lg bg-gray-100 py-1 px-3">
+                                        <div className="cursor-pointer rounded-lg bg-primary-100 py-1 px-3 text-primary-800">
                                             Helpcenter
                                         </div>
                                     </div>
