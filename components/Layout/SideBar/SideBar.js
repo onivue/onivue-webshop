@@ -19,7 +19,7 @@ export default function SideBar({ children }) {
         <>
             {sideBarIsOpen ? <SideBarOverlay /> : <SideBarToggleButton toggleSidenav={toggleSideBar} />}
             <main className="mx-auto max-w-[1900px] ">
-                <SideBarNavigationWrapper sideBarIsOpen={sideBarIsOpen} ref={ref}>
+                <SideBarNavigationWrapper sideBarIsOpen={sideBarIsOpen} refProp={ref}>
                     <SideBarLogo />
                     <SideBarNavigation />
                 </SideBarNavigationWrapper>
@@ -55,7 +55,7 @@ function SideBarNavigationWrapper(props) {
         >
             <div
                 className="no-scrollbar flex h-full flex-1 flex-col overflow-y-hidden rounded-xl bg-white p-4 shadow-md hover:overflow-y-auto focus:outline-none"
-                ref={props.ref}
+                ref={props.refProp}
             >
                 {props.children}
             </div>
