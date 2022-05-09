@@ -26,8 +26,8 @@ export default function Home() {
                 </h1>
             </div>
 
-            <div className="top-0 z-10 flex w-full flex-col  items-center justify-between gap-4 rounded-lg bg-white py-2 px-4 shadow-md md:flex-row">
-                <div className="flex gap-4 text-xl text-gray-400">
+            <div className="top-0 z-10 flex w-full flex-col  items-center justify-between gap-4 rounded-lg py-2 px-4 md:flex-row">
+                <div className="flex gap-4 text-xl text-primary-400">
                     <HiFilter className="cursor-pointer" />
                     <HiAdjustments className="cursor-pointer" />
                 </div>

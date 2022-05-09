@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
             <div className="group relative cursor-pointer rounded-2xl bg-white p-2 shadow-md hover:ring-2 hover:ring-primary-300">
                 <div className="relative overflow-x-hidden rounded-xl">
                     {/* <img className="h-52 w-full rounded-lg object-scale-down" src={product.image} /> */}
-                    <div className="relative h-52 w-full animate-fade-in rounded-lg object-scale-down">
+                    <div className="relative h-40 w-full animate-fade-in rounded-lg object-scale-down">
                         <Image
                             src={product.image}
                             alt={product.title}
