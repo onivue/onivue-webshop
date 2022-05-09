@@ -21,12 +21,12 @@ function MyApp({ Component, pageProps }) {
                 />
                 <title>onivue-webshop</title>
             </Head>
-            <img
+            {/* <img
                 src="https://play.tailwindcss.com//img/beams.jpg"
                 alt=""
                 // width="1308"
                 className="fixed top-1/2 left-1/2 -z-50 max-w-none -translate-x-1/2 -translate-y-1/2 animate-fade-in"
-            />
+            /> */}
             <SideBar>
                 <TopBar />
                 <div className="flex flex-1">
